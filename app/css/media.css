@@ -1,3 +1,11 @@
+@media screen and (max-width: 1380px) {
+  .nav__contacts-tel {
+    font-size: 18px; }
+  .nav__list-item {
+    font-size: 14px; }
+    .nav__list-item:not(:last-child) {
+      margin-bottom: 5px; } }
+
 @media screen and (max-width: 1070px) {
   .main-slider__item {
     background-position-x: 20%; }

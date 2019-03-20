@@ -355,10 +355,11 @@ button:active
 		min-height: 100vh
 		background-position: 50% 50%
 		background-repeat: no-repeat
-		transition: all 400ms ease
+		transition: all .7s ease
 		position: relative
 		text-align: center
 		padding-top: 80px
+		overflow: hidden
 		
 		&::before,
 		&::after
@@ -374,15 +375,17 @@ button:active
 			background-color: #55A43D
 		&::after
 			background-color: #FFFFFF
-		*
+		> *
 			position: relative
-			z-index: 2
+			z-index: 2	
 		&-ttl
 			text-transform: uppercase
 			font-size: 36px
-			margin-bottom: 55px
-
-			
+			margin-bottom: 25px
+		&-cnt
+			opacity: 0
+			transition: .7s all ease
+			transform: translateX(-30px)
 .cat__wrp:hover .cat__item
 	width: 25%
 .cat__wrp:hover .cat__item .cat__item-ttl
@@ -393,28 +396,222 @@ button:active
 	width: 75%
 .cat__wrp:hover .cat__item:hover .cat__item-ttl
 	color: #000
+.cat__wrp:hover .cat__item:hover .cat__item-cnt
+		opacity: 1
+		transform: translateX(0px)
 .cat__wrp:hover .cat__item:hover::before
 	opacity: 0
 .cat__wrp:hover .cat__item:hover::after
 	opacity: .8
 
-// .accordion ul:hover li {
-//   width: 8%;
-// }
-// .accordion ul:hover li:hover {
-//   width: 60%;
-// }
-// .accordion ul:hover li:hover a {
-//   background: rgba(0, 0, 0, 0.4);
-// }
-// .accordion ul:hover li:hover a * {
-//   opacity: 1;
-//   -webkit-transform: translateX(0);
-//   transform: translateX(0);
-// }
-
-
-
+.cat
+	&__item
+		&-link
+			display: flex
+			flex-direction: column
+			align-items: center
+			margin-bottom: 18px
+			&_top
+				max-width: 250px
+				margin-left: auto
+				margin-right: auto
+				.cat__item-link-image::before
+					display: none
+				span
+					background-position: 50% 50%
+					background-size: contain
+					background-repeat: no-repeat
+					&::before,
+					&::after
+						display: none
+				&:hover
+					opacity: .7
+					transform: scale(.9)
+			&_top .cat__item-link-ttl
+				text-decoration: underline
+				font-family: "Museo700"
+				font-size: 18px
+			&-image
+				margin-left: auto
+				margin-right: auto
+				margin-bottom: 10px
+				position: relative
+				&::before
+					position: absolute
+					content: ''
+					width: 60px
+					height: 60px
+					left: 50%
+					margin-left: -30px
+					top: -4px
+					background-color: #55A43D
+					border-radius: 50%
+					opacity: 0
+				span
+					display: block
+					width: 50px
+					height: 50px
+					position: relative
+					&::before,
+					&::after
+						position: absolute
+						content: ''
+						width: 40px
+						height: 40px
+						left: 50%
+						margin-left: -20px
+						top: 50%
+						margin-top: -20px
+						background-position: 50% 50%
+						background-size: contain
+						background-repeat: no-repeat
+					&::before
+						opacity: 1
+					&::after
+						opacity: 0
+			&:hover .cat__item-link-image::before
+				opacity: 1
+			&:hover .cat__item-link-image span::before
+				opacity: 0
+			&:hover .cat__item-link-image span::after
+				opacity: 1
+			&:hover
+				color: #000
+				text-decoration: underline
+		&-list
+			margin-top: 30px
+			padding-left: 15px
+			padding-right: 15px
+.cat
+	&__item:nth-child(1) .cat__item-list
+		.cat__item-link:nth-child(1)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_2_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_2_2.svg')
+		.cat__item-link:nth-child(2)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_3_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_3_2.svg')
+		.cat__item-link:nth-child(3)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_4_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_4_2.svg')
+		.cat__item-link:nth-child(4)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_5_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_5_2.svg')
+		.cat__item-link:nth-child(5)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_6_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_6_2.svg')
+		.cat__item-link:nth-child(6)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_7_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_7_2.svg')
+		.cat__item-link:nth-child(7)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_8_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_8_2.svg')
+		.cat__item-link:nth-child(8)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_9_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_9_2.svg')
+		.cat__item-link:nth-child(9)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_10_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_10_2.svg')
+		.cat__item-link:nth-child(10)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_11_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_11_2.svg')
+		.cat__item-link:nth-child(11)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_12_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_12_2.svg')
+		.cat__item-link:nth-child(12)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_13_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_13_2.svg')
+.cat
+	&__item:nth-child(2) .cat__item-list
+		.cat__item-link:nth-child(1)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_2-img_2_1.svg')
+					&::after
+						background-image: url('../img/cat__item_2-img_2_2.svg')
+		.cat__item-link:nth-child(2)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_2-img_3_1.svg')
+					&::after
+						background-image: url('../img/cat__item_2-img_3_2.svg')
+		.cat__item-link:nth-child(3)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_2-img_4_1.svg')
+					&::after
+						background-image: url('../img/cat__item_2-img_4_2.svg')
+		.cat__item-link:nth-child(4)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_2-img_5_1.svg')
+					&::after
+						background-image: url('../img/cat__item_2-img_5_2.svg')
+		.cat__item-link:nth-child(5)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_2-img_6_1.svg')
+					&::after
+						background-image: url('../img/cat__item_2-img_6_2.svg')
+		.cat__item-link:nth-child(6)
+			.cat__item-link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_2-img_7_1.svg')
+					&::after
+						background-image: url('../img/cat__item_2-img_7_2.svg')
 
 
 
