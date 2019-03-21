@@ -1,3 +1,8 @@
+@media screen and (min-height: 758px) {
+  .cat__item {
+    -webkit-background-size: cover;
+            background-size: cover; } }
+
 @media screen and (max-width: 1380px) {
   .nav__contacts-tel {
     font-size: 18px; }

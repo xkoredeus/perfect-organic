@@ -783,17 +783,63 @@ button:active
 		.prod__link:hover
 			text-decoration: none
 	&__item:nth-child(2)
-		a:hover
-			text-decoration: underline
+		.prod__link
+			margin-bottom: 25px
+		.prod__link-right
+			a:hover
+				text-decoration: underline
 	&__item:nth-child(2) .prod__cnt
-		.prod__link:nth-child(1)
-			.prod__link-image
-				&::before
-					display: none
-				span
-					&::before
-						background-image: url('../img/cat__item_1-img_1.svg')
-					&::after
-						background-image: url('../img/cat__item_1-img_1.svg')
-
+		.prod__link-image
+			&::before
+				top: -9px
+			span
+				margin-top: -14px
+		> div:nth-child(1)
+			.prod__link:nth-child(1)
+				.prod__link-image
+					span
+						&::before
+							background-image: url('../img/cat__item_2-img_2_1.svg')
+						&::after
+							background-image: url('../img/cat__item_2-img_2_2.svg')
+		> div:nth-child(1)
+			.prod__link:nth-child(2)
+				.prod__link-image
+					span
+						&::before
+							background-image: url('../img/cat__item_2-img_6_1.svg')
+						&::after
+							background-image: url('../img/cat__item_2-img_6_2.svg')
+		> div:nth-child(2)
+			.prod__link:nth-child(1)
+				.prod__link-image
+					span
+						&::before
+							background-image: url('../img/cat__item_2-img_2_1.svg')
+						&::after
+							background-image: url('../img/cat__item_2-img_2_2.svg')
+		> div:nth-child(2)
+			.prod__link:nth-child(2)
+				.prod__link-image
+					span
+						&::before
+							background-image: url('../img/cat__item_2-img_4_1.svg')
+						&::after
+							background-image: url('../img/cat__item_2-img_4_2.svg')
+		> div:nth-child(3)
+			.prod__link:nth-child(1)
+				.prod__link-image
+					span
+						&::before
+							background-image: url('../img/cat__item_2-img_7_1.svg')
+						&::after
+							background-image: url('../img/cat__item_2-img_7_2.svg')
+		> div:nth-child(3)
+			.prod__link:nth-child(2)
+				.prod__link-image
+					span
+						&::before
+							background-image: url('../img/cat__item_2-img_5_1.svg')
+						&::after
+							background-image: url('../img/cat__item_2-img_5_2.svg')
 @import "media"
