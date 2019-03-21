@@ -289,19 +289,23 @@ button:active
 	list-style-type: none
 	padding-left: 0
 	margin-left: 0
-	margin-bottom: 25px
+	margin-bottom: 0
+	padding: 15px 20px
+	background-color: #fff
 	li,
 	a
 		position: relative
 	li:not(:last-child)
 		margin-right: 26px
-		text-decoration: underline
+		// text-decoration: underline
 		&::after
 			content: '>'
 			position: absolute
 			right: -16px
 			top: 0
 			font-size: 14px
+	li:last-child
+		color: #55A43D
 .nav
 	position: sticky
 	left: 0
@@ -842,4 +846,91 @@ button:active
 							background-image: url('../img/cat__item_2-img_5_1.svg')
 						&::after
 							background-image: url('../img/cat__item_2-img_5_2.svg')
+.content
+	background-color: #F4F4F4
+	position: relative
+	&__menu
+		color: #fff
+		background-color: #55A43D
+		padding: 12px 15px
+		cursor: pointer
+		&:hover
+			opacity: .7
+		&-btn
+			position: relative
+			padding-left: 25px
+			font-size: 18px
+			font-family: 'Museo700'
+			text-align: center
+			max-width: 120px
+			margin: 0 auto
+			&::before
+				content: ''
+				position: absolute
+				width: 18px
+				height: 22px
+				left: 0
+				top: -1px
+				background: url('../img/catalog__btn-img.svg') no-repeat 50% 50% / contain
+	// 	position: fixed
+	// 	left: 0
+	// 	top: 0
+	// 	width: 100%
+	// 	height: 20px
+	// 	transform: rotate(90deg)
+
+.catalog
+	&__item
+		&_descr
+			height: 100%
+			flex-direction: column
+			justify-content: center
+			align-items: flex-start
+	&__item
+		padding: 30px
+		background-position: 50% 50%
+		background-size: cover
+		background-repeat: no-repeat
+		min-height: 250px
+		position: relative
+		border: 1px solid #fff
+		overflow: hidden
+		display: flex
+		align-items: flex-start
+		&-ttl
+			font-size: 28px
+			font-family: 'Museo700'
+			margin-bottom: 25px
+			line-height: 1.4
+			span
+				color: #55A43D
+		p:not(:last-child)
+			margin-bottom: 10px
+		&-img
+			position: absolute
+			left: 0
+			top: 0
+			width: 100%
+			height: 100%
+			background-size: cover
+			background-position: 50% 50%
+			background-repeat: no-repeat
+			transition: .8s all ease
+		&-link
+			display: inline
+			position: relative
+			font-family: 'Museo500'
+			text-transform: uppercase
+			font-size: 20px
+			img
+				margin-left: 12px
+				margin-top: -4px
+		&:hover
+			.catalog__item-link
+				color: #000
+				img
+					margin-left: 16px
+			.catalog__item-img
+				transform: scale(1.1)
+
 @import "media"

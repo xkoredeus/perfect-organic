@@ -398,19 +398,22 @@ button:active {
   list-style-type: none;
   padding-left: 0;
   margin-left: 0;
-  margin-bottom: 25px; }
+  margin-bottom: 0;
+  padding: 15px 20px;
+  background-color: #fff; }
   .crumbs li,
   .crumbs a {
     position: relative; }
   .crumbs li:not(:last-child) {
-    margin-right: 26px;
-    text-decoration: underline; }
+    margin-right: 26px; }
     .crumbs li:not(:last-child)::after {
       content: '>';
       position: absolute;
       right: -16px;
       top: 0;
       font-size: 14px; }
+  .crumbs li:last-child {
+    color: #55A43D; }
 
 .nav {
   position: -webkit-sticky;
@@ -902,6 +905,107 @@ button:active {
     background-image: url("../img/cat__item_2-img_5_1.svg"); }
   .prod__item:nth-child(2) .prod__cnt > div:nth-child(3) .prod__link:nth-child(2) .prod__link-image span::after {
     background-image: url("../img/cat__item_2-img_5_2.svg"); }
+
+.content {
+  background-color: #F4F4F4;
+  position: relative; }
+  .content__menu {
+    color: #fff;
+    background-color: #55A43D;
+    padding: 12px 15px;
+    cursor: pointer; }
+    .content__menu:hover {
+      opacity: .7; }
+    .content__menu-btn {
+      position: relative;
+      padding-left: 25px;
+      font-size: 18px;
+      font-family: 'Museo700';
+      text-align: center;
+      max-width: 120px;
+      margin: 0 auto; }
+      .content__menu-btn::before {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 22px;
+        left: 0;
+        top: -1px;
+        background: url("../img/catalog__btn-img.svg") no-repeat 50% 50%/contain; }
+
+.catalog__item_descr {
+  height: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.catalog__item {
+  padding: 30px;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 250px;
+  position: relative;
+  border: 1px solid #fff;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  .catalog__item-ttl {
+    font-size: 28px;
+    font-family: 'Museo700';
+    margin-bottom: 25px;
+    line-height: 1.4; }
+    .catalog__item-ttl span {
+      color: #55A43D; }
+  .catalog__item p:not(:last-child) {
+    margin-bottom: 10px; }
+  .catalog__item-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-background-size: cover;
+            background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-transition: .8s all ease;
+    -o-transition: .8s all ease;
+    transition: .8s all ease; }
+  .catalog__item-link {
+    display: inline;
+    position: relative;
+    font-family: 'Museo500';
+    text-transform: uppercase;
+    font-size: 20px; }
+    .catalog__item-link img {
+      margin-left: 12px;
+      margin-top: -4px; }
+  .catalog__item:hover .catalog__item-link {
+    color: #000; }
+    .catalog__item:hover .catalog__item-link img {
+      margin-left: 16px; }
+  .catalog__item:hover .catalog__item-img {
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1); }
 
 @media screen and (min-height: 758px) {
   .cat__item {
