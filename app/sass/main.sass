@@ -296,7 +296,6 @@ button:active
 	li:not(:last-child)
 		margin-right: 26px
 		text-decoration: underline
-		
 		&::after
 			content: '>'
 			position: absolute
@@ -382,6 +381,10 @@ button:active
 			text-transform: uppercase
 			font-size: 36px
 			margin-bottom: 25px
+			display: block
+			&:hover
+				opacity: .7
+				transform: scale(.9)
 		&-cnt
 			opacity: 0
 			transition: .7s all ease
@@ -544,9 +547,9 @@ button:active
 			.cat__item-link-image
 				span
 					&::before
-						background-image: url('../img/cat__item_1-img_10_1.svg')
+						background-image: url('../img/cat__item_1-img_10_1.png')
 					&::after
-						background-image: url('../img/cat__item_1-img_10_2.svg')
+						background-image: url('../img/cat__item_1-img_10_2.png')
 		.cat__item-link:nth-child(10)
 			.cat__item-link-image
 				span
@@ -612,8 +615,185 @@ button:active
 						background-image: url('../img/cat__item_2-img_7_1.svg')
 					&::after
 						background-image: url('../img/cat__item_2-img_7_2.svg')
-
-
-
+.prod
+	padding: 35px
+	background-color: #e8e8e8
+	&__item
+		margin: 30px 0
+		&-ttl
+			display: block
+			text-transform: uppercase
+			font-size: 36px
+			margin-bottom: 20px
+			&:hover
+				opacity: .7
+	&__link
+		&-ttl
+			font-family: "Museo700"
+			font-size: 16px
+		&-image
+			margin-left: 0
+			margin-right: 5px
+			margin-bottom: 0px
+			position: relative
+			&::before
+				position: absolute
+				content: ''
+				width: 40px
+				height: 40px
+				left: 50%
+				margin-left: -20px
+				top: 5px
+				background-color: #55A43D
+				border-radius: 50%
+				opacity: 0
+			span
+				display: block
+				width: 50px
+				height: 50px
+				position: relative
+				background-position: 50% 50%
+				background-size: contain
+				background-repeat: no-repeat
+				&::before,
+				&::after
+					position: absolute
+					content: ''
+					width: 26px
+					height: 20px
+					left: 50%
+					margin-left: -13px
+					top: 50%
+					margin-top: -10px
+					background-position: 50% 50%
+					background-size: contain
+					background-repeat: no-repeat
+				&::before
+					opacity: 1
+				&::after
+					opacity: 0
+		&:hover .prod__link-image::before
+			opacity: 1
+		&:hover .prod__link-image span::before
+			opacity: 0
+		&:hover .prod__link-image span::after
+			opacity: 1
+		&:hover
+			color: #000
+			text-decoration: underline
+	&__item:nth-child(1) .prod__cnt
+		.prod__link:nth-child(1)
+			.prod__link-image
+				&::before
+					display: none
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_1.svg')
+		.prod__link:nth-child(2)
+			.prod__link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_8_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_8_2.svg')
+		.prod__link:nth-child(3)
+			.prod__link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_13_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_13_2.svg')
+		.prod__link:nth-child(4)
+			.prod__link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_2_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_2_2.svg')
+		.prod__link:nth-child(5)
+			.prod__link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_4_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_4_2.svg')
+		.prod__link:nth-child(6)
+			.prod__link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_5_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_5_2.svg')
+		.prod__link:nth-child(7)
+			.prod__link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_3_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_3_2.svg')
+		.prod__link:nth-child(8)
+			.prod__link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_6_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_6_2.svg')
+		.prod__link:nth-child(9)
+			.prod__link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_7_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_7_2.svg')
+		.prod__link:nth-child(10)
+			.prod__link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_9_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_9_2.svg')
+		.prod__link:nth-child(11)
+			.prod__link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_10_1.png')
+					&::after
+						background-image: url('../img/cat__item_1-img_10_2.png')
+		.prod__link:nth-child(12)
+			.prod__link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_11_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_11_2.svg')
+		.prod__link:nth-child(13)
+			.prod__link-image
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_12_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_12_2.svg')
+	&__list
+		display: flex
+		flex-direction: column
+		margin-top: 15px
+	&__item:nth-child(2)
+		.prod__link:hover
+			text-decoration: none
+	&__item:nth-child(2)
+		a:hover
+			text-decoration: underline
+	&__item:nth-child(2) .prod__cnt
+		.prod__link:nth-child(1)
+			.prod__link-image
+				&::before
+					display: none
+				span
+					&::before
+						background-image: url('../img/cat__item_1-img_1.svg')
+					&::after
+						background-image: url('../img/cat__item_1-img_1.svg')
 
 @import "media"
