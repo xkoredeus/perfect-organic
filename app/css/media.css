@@ -9,7 +9,11 @@
   .nav__list-item {
     font-size: 14px; }
     .nav__list-item:not(:last-child) {
-      margin-bottom: 5px; } }
+      margin-bottom: 5px; }
+  .content .content-menu__wrp .content-menu__btn {
+    left: 15.5%; }
+  .content .content-menu {
+    left: 22%; } }
 
 @media screen and (max-width: 1070px) {
   .main-slider__item {

@@ -41,19 +41,19 @@ textarea
 input,
 textarea,
 select
-	color: #2D2A2B
+	color: #141414
 	font-family: 'Museo500'
 	font-size: 14px
-	padding: 8px 30px
-	background: none
+	padding: 8px 15px
+	background: #fff
 input,
-select
-	border: none
-	border-bottom: 1px solid #000
+select,
+textarea
+	border: 1px solid #C4C4C4
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 input[type="tel"]::placeholder
-	color: #2D2A2B
+	color: #141414
 input:focus,
 textarea:focus,
 input:active,
@@ -61,7 +61,7 @@ textarea:active
 	background: none
 	color: #2D2A2B
 	border-bottom: 1px solid #55A43D
-	border-color: #39B563
+	border-color: #55A43D
 	outline: none
 .shd,
 button:active
@@ -71,21 +71,6 @@ button:active
 .img-fluid
 	max-width: 100%
 	height: auto
-@keyframes brr
-	0%
-		color: #000
-	33%
-		background-color: #50B848
-		color: #000
-	66%
-		background-color: #00BFF3
-		color: #000
-	80%
-		background-color: #EE337B
-		color: #000
-	100%
-		background-color: #55A43D
-		color: #000
 .btn
 	outline: none
 	font-size: 14px
@@ -93,13 +78,21 @@ button:active
 	text-transform: uppercase
 	text-align: center
 	padding: 15px 30px
-	color: #000
+	color: #fff
 	background-color: #55A43D
 	position: relative
 	display: block
 	max-width: 320px
 	&:hover
-		animation: brr linear 5s infinite
+		color: #fff
+		opacity: .8
+		transform: scale(.97)
+	&_trsp
+		background-color: #fff
+		border: 1px solid #55A43D
+		color: #000
+		&:hover
+			color: #000
 .list_circle
 	list-style-type: none
 	padding-left: 0
@@ -121,9 +114,12 @@ button:active
 	padding: 40px
 	background-color: transparent
 	.fancybox-close-small
-		top: 40px
-		right: 40px
-		color: #000
+		top: 0
+		right: 29px
+		padding: 0
+		color: #fff
+		&:hover
+			transform: rotate(180deg)
 	.popup__wrp
 		display: -webkit-flex
 		display: -moz-flex
@@ -139,25 +135,8 @@ button:active
 		align-items: center
 		justify-content: center
 		position: relative
-		&::before
-			z-index: 1
-			content: ''
-			position: absolute
-			height: 110%
-			width: 110%
-			top: -5%
-			right: -5%
-			bottom: -5%
-			left: -5%
-			z-index: 1
-			background: rgb(255,203,5)
-			background: -moz-linear-gradient(-45deg, rgba(255,203,5,1) 0%, rgba(80,184,72,1) 32%, rgba(0,191,243,1) 70%, rgba(238,51,123,1) 100%)
-			background: -webkit-linear-gradient(-45deg, rgba(255,203,5,1) 0%,rgba(80,184,72,1) 32%,rgba(0,191,243,1) 70%,rgba(238,51,123,1) 100%)
-			background: linear-gradient(135deg, rgba(255,203,5,1) 0%,rgba(80,184,72,1) 32%,rgba(0,191,243,1) 70%,rgba(238,51,123,1) 100%)
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#55A43D', endColorstr='#ee337b',GradientType=1 )
-			opacity: .7
-	.popup_call__wrp
-		max-width: 320px
+	.popup__wrp
+		max-width: 450px
 		.popup
 			width: 100%
 			height: 100%
@@ -181,26 +160,48 @@ button:active
 			padding: 20px 25px 30px
 			text-align: center
 			&__ttl
-				font-family: 'Museo900', sans-serif
-				text-transform: uppercase
+				font-family: 'Museo500', sans-serif
 				font-size: 22px
-				margin-bottom: 30px
+				margin-bottom: 20px
 			.form__input
 				color: #2D2A2B
 				margin-bottom: 15px
+				width: 270px
 			input.form__input::placeholder
 				color: #2D2A2B
 			.btn
-				width: 100%
-				margin-bottom: 15px
-		&__policy
-			margin-top: 15px
-			max-width: 230px
-			text-align: center
-			font-size: 12px
-			a
-				font-size: 12px 
-				color: #00BFF3
+				padding-top: 10px
+				padding-bottom: 10px
+				&:hover
+					opacity: .7
+			&__policy
+				margin-top: 15px
+				max-width: 230px
+				text-align: center
+				font-size: 12px
+				a
+					font-size: 12px
+		.success
+			&__ttl
+				font-size: 30px
+				color: #55A43D
+				font-family: 'Museo900'
+			&__descr
+				font-size: 18px
+				line-height: 1.2
+		.added
+			&__ttl
+				font-size: 24px
+				font-family: 'Museo500'
+			&__item
+				text-align: left
+				&-ttl
+					font-family: 'Museo900'
+					margin-bottom: 10px
+			.btn
+				font-size: 12px
+				padding-left: 15px
+				padding-right: 15px
 .owl-carousel
 	.owl-dots
 		position: absolute
@@ -311,7 +312,7 @@ button:active
 	left: 0
 	top: 0
 	bottom: 0
-	width: 300px
+	width: 18%
 	height: 100vh
 	padding-top: 40px
 	padding-bottom: 40px
@@ -847,10 +848,11 @@ button:active
 						&::after
 							background-image: url('../img/cat__item_2-img_5_2.svg')
 .content
+	width: 82%
 	background-color: #F4F4F4
 	position: relative
-	// &__in
-	// 	padding-left: 50px
+	&__in
+		width: 100%
 	.content-menu__wrp
 		color: #fff
 		background-color: #55A43D
@@ -880,7 +882,7 @@ button:active
 			max-width: 120px
 			margin: 40vh auto 0
 			margin-top: 40vh
-			left: 218px
+			left: 16%
 			display: block
 			transform: rotate(-90deg)
 			&::before
@@ -903,7 +905,7 @@ button:active
 		background-color: #e8e8e8
 		position: fixed
 		width: 0px
-		left: 303px
+		left: 21%
 		top: 0
 		opacity: 0
 		height: 100vh
@@ -1251,7 +1253,112 @@ button:active
 		.catalog__item-link
 			font-family: 'Museo900'
 			font-size: 26px
-	
-
-
+		&_prime
+			.catalog__item-link
+				font-size: 18px
+.cards
+	&__item
+		width: 100%
+		padding: 30px
+		min-height: 280px
+		position: relative
+		border: 1px solid #fff
+		overflow: hidden
+		&-info
+			position: relative
+			z-index: 2
+			display: flex
+			flex-direction: column
+			justify-content: space-between
+			&-top
+				display: block
+				&:hover
+					color: #000
+					transform: scale(.97)
+					opacity: .8
+		&-ttl
+			font-size: 28px
+			font-family: 'Museo900'
+			margin-bottom: 15px
+			line-height: 1.2
+		&-descr
+			font-family: 'Museo500'
+			margin-bottom: 25px
+		&-price
+			font-size: 18px
+			padding: 7px 10px
+			text-align: center
+			border: 1px solid #000
+			max-width: 130px
+			&_old
+				text-align: left
+				padding: 0
+				border: none
+				margin-bottom: 8px
+				color: #8D8D8D
+				text-decoration: line-through
+		&-btn
+			position: absolute
+			left: 0px
+			bottom: 0px
+			font-size: 18px
+			padding: 8px 10px
+			text-align: center
+			background-color: #55A43D
+			color: #fff
+			display: block
+			max-width: 130px
+			opacity: 0
+			&:hover
+				color: #fff
+				transform: scale(.95)
+		&-img
+			position: absolute
+			right: 0
+			top: 50%
+			margin-top: -113px
+			width: 144px
+			height: 226px
+			background-size: contain
+			background-position: 50% 100%
+			background-repeat: no-repeat
+			transition: .8s all ease
+		&:hover
+			.cards__item-price
+				opacity: 0
+			.cards__item-btn
+				opacity: 1
+			.cards__item-img
+				transform: scale(1.1)
+.pag
+	display: flex
+	justify-content: center
+	align-items: center
+	padding: 15px 0
+	&__list
+		list-style-type: none
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-bottom: 0
+		li
+			margin: 0 15px
+			display: flex
+			justify-content: center
+			align-items: center
+		.active
+			background-color: #55A43D
+			border-radius: 50%
+			a
+				color: #fff
+		a
+			font-family: 'Museo500'
+			width: 25px
+			height: 25px
+			display: flex
+			justify-content: center
+			align-items: center
+		.control
+			&:hover
+				opacity: .7
 @import "media"
