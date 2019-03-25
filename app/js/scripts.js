@@ -52,4 +52,45 @@ $(function() {
   $('.content-menu__cross').on('click', function(){
      $('.content-menu__wrp').toggleClass('active');
   });
+  //стилизация input type number
+  
+	// $(function() {
+	// 	var $shuka = 
+	//   (function quantityProducts() {
+	//     var $quantityArrowMinus = $(".cart__item-quantity-minus");
+	//     var $quantityArrowPlus = $(".cart__item-quantity-plus");
+	//     var $quantityNum = $(".cart__item-quantity-num");
+	//     $quantityArrowMinus.click(quantityMinus);
+	//     $quantityArrowPlus.click(quantityPlus);
+	//     function quantityMinus() {
+	//       if ($quantityNum.val() > 1) {
+	//         $quantityNum.val(+$quantityNum.val() - 1);
+	//       }
+	//     }
+	//     function quantityPlus() {
+	//       $quantityNum.val(+$quantityNum.val() + 1);
+	//     }
+	//   })();
+	// });
+
+	// $('.cart__item-quantity-minus').on('click', function(){
+	// 	if ($(this).next('.cart__item-quantity-num').val() > 1) {
+	// 		$(this).next('.cart__item-quantity-num').val(+$('.cart__item-quantity-num').val() - 1);
+	// 	}
+	// });
+	// $('.cart__item-quantity-plus').on('click', function(){
+	// 	$(this).prev('.cart__item-quantity-num').val(+$('.cart__item-quantity-num').val() + 1);
+	// });
+
+	$( '.cart__item-quantity' ).on( 'click', '.cart__item-quantity-minus, .cart__item-quantity-plus', function ( event ) {
+    event.preventDefault();
+    var input = $( this ).siblings( '.cart__item-quantity-num' );
+    if ( input.val() > 0 ) {
+        if ( $( this ).hasClass( '.cart__item-quantity-minus' )  ) {
+            input.val( +input.val() - 1 );
+        } else if ( $( this ).hasClass( '.cart__item-quantity-plus' ) ) {
+            input.val( +input.val() + 1 );
+        }
+    }
+	});
 });

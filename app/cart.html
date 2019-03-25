@@ -293,41 +293,109 @@
 				<div class="content__in">
 					<ul class="crumbs">
 						<li><a href="#">Главная</a></li>
-						<li><a href="#">Товары</a></li>
-						<li>Идеальный дом</li>
+						<li>Корзина</li>
 					</ul>
-					<div class="catalog catalog_sub">
-						<div class="catalog__cnt row no-gutters">
-							<div class="col-sm-4 col-12">
-								<a href="#" class="catalog__item">
-									<div class="catalog__item-img" style="background-image: url(img/cosmetics/catalog__item_img_1.jpg)"></div>
-									<div class="catalog__item-link">Анатомические <br> изделия  <img src="img/catalog__link-arr.svg" alt="catalog__link-arr.svg"></div>
-								</a>
-							</div>
-							<div class="col-sm-4 col-12">
-								<a href="#" class="catalog__item">
-									<div class="catalog__item-img" style="background-image: url(img/cosmetics/catalog__item_img_2.jpg)"></div>
-									<div class="catalog__item-link">Чистая и полезная <br> вода <img src="img/catalog__link-arr.svg" alt="catalog__link-arr.svg"></div>
-								</a>
-							</div>
-							<div class="col-sm-4 col-12">
-								<a href="#" class="catalog__item">
-									<div class="catalog__item-img" style="background-image: url(img/cosmetics/catalog__item_img_3.jpg)"></div>
-									<div class="catalog__item-link">Удобрения <img src="img/catalog__link-arr.svg" alt="catalog__link-arr.svg"></div>
-								</a>
-							</div>
-							<div class="col-sm-8 col-12">
-								<div class="catalog__item catalog__item_feed">
-									<div class="catalog__item-ttl">Наши специалисты готовы проконсультировать Вас</div>
-									<a href="tel:88005555512" class="catalog__item-tel">8-800-555-55-12</a>
+					<div class="cart section_inner">
+						<h1 class="section__ttl">Корзина</h1>
+						<div class="cart__top d-flex justify-content-between align-items-end">
+							<div class="cart__top-amount">В корзине 2 продукта на сумму: <b>5400</b> Р</div>
+							<a href="#" class="cart__top-clear">Очистить корзину</a>
+						</div>
+						<div class="cart__items">
+							<div class="cart__item">
+								<div class="row align-items-center">
+									<div class="col-xl-2">
+										<a href="#"><img src="img/cards/cards__img_1.png" alt="cards__img_1.png" class="cart__item-img img-fluid"></a>
+									</div>
+									<div class="col-xl-7 d-flex flex-column">
+										<div class="cart__item-ttl">Shake up Diet вишня</div>
+										<div class="cart__item-descr">Смесь сухая для приготовления коктейлей Форма выпуска: банка - 572 гр <br> Рег. № декларации соответствия:</div>
+									</div>
+									<div class="col-xl-2 d-flex flex-column align-items-end">
+										<div class="cart__item-quantity d-flex jusity-content-center">
+											<button class="cart__item-quantity-minus">-</button>
+											<input type="number" value="1" class="cart__item-quantity-num">
+											<button class="cart__item-quantity-plus">+</button>
+										</div>
+										<div class="cart__item-price">
+											1800 Р
+										</div>
+									</div>
+									<div class="col-xl-1 d-flex justify-content-center align-items-center">
+										<a href="#" class="cart__item-delete"></a>
+									</div>
 								</div>
 							</div>
-							<div class="col-sm-4 col-12">
-								<div class="catalog__item catalog__item_descr-small">
-									<div class="catalog__item-ttl">Производственно - исследовательская группа <span>Perfect Organics</span> предлагает передовые решения в следующих направлениях:</div>
-									<span>Восстановление здоровья и качества жизни;</span>
-									<span>Разработке эффективных и безопасных средств;</span>
-									<span>Создании не имеющих мировых аналогов устройств.</span>
+							<div class="cart__item">
+								<div class="row align-items-center">
+									<div class="col-xl-2">
+										<a href="#"><img src="img/cards/cards__img_1.png" alt="cards__img_1.png" class="cart__item-img img-fluid"></a>
+									</div>
+									<div class="col-xl-7 d-flex flex-column">
+										<div class="cart__item-ttl">Shake up Diet вишня</div>
+										<div class="cart__item-descr">Смесь сухая для приготовления коктейлей Форма выпуска: банка - 572 гр <br> Рег. № декларации соответствия:</div>
+									</div>
+									<div class="col-xl-2 d-flex flex-column align-items-end">
+										<div class="cart__item-quantity d-flex jusity-content-center">
+											<button class="cart__item-quantity-minus">-</button>
+											<input type="number" value="1" class="cart__item-quantity-num">
+											<button class="cart__item-quantity-plus">+</button>
+										</div>
+										<div class="cart__item-price">
+											1800 Р
+										</div>
+									</div>
+									<div class="col-xl-1 d-flex justify-content-center align-items-center">
+										<a href="#" class="cart__item-delete"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cart__disc pb-5 row align-items-center">
+							<div class="col-xl-7">
+								<div class="cart__disc-ttl">Укажите номер скидочной карты или промо-код</div>
+								<div class="cart__disc-descr">Скидки не суммируются</div>
+							</div>
+							<div class="col-xl-2">
+								<input type="text" class="cart__disc-input" placeholder="XXXX XXXX XX">
+							</div>
+							<div class="col-xl-3">
+								<a href="#" class="btn">Получить скидку</a>
+							</div>
+						</div>
+						<div class="cart__bot pt-5 pb-2 row align-items-center">
+							<div class="row col-12">
+								<div class="col-xl-9">
+									<div class="cart__bot-ttl">Бесплатная доставка по всей России</div>
+									<div class="cart__bot-descr">Доставка товара осуществляется собственной курьерской службой на следующий день после оформления заказа. <br> Почтой России или экспресс-службой.</div>
+								</div>
+								<div class="col-xl-3 d-flex flex-column no-gutters">
+									<div class="row cart__bot-total">
+										<div class="col-8">Товаров</div>
+										<div class="col-4">3</div>
+									</div>
+									<div class="row cart__bot-total">
+										<div class="col-8">Общий вес</div>
+										<div class="col-4">1144 гр</div>
+									</div>
+									<div class="row cart__bot-total">
+										<div class="col-8">Сумма</div>
+										<div class="col-4">5400 Р</div>
+									</div>
+									<div class="row cart__bot-total">
+										<div class="col-8">Сумма со скидкой</div>
+										<div class="col-4">5400 Р</div>
+									</div>
+								</div>
+							</div>
+							<div class="row col-12 align-items-center justify-content-between pt-4 pb-4">
+								<div class="col-6 d-flex flex-wrap">
+									<a href="#" class="pr-3 und">Как оплатить</a>
+									<a href="#" class="und">Доставка</a>
+								</div>
+								<div class="col-6 d-flex flex-wrap justify-content-end">
+									<a href="#" class="btn mr-2">Перейти к оплате</a>
+									<a href="#" class="btn btn_trsp">Продолжить покупки</a>
 								</div>
 							</div>
 						</div>

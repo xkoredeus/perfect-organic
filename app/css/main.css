@@ -89,6 +89,13 @@ input[type="email"]::placeholder,
 input[type="tel"]::placeholder {
   color: #141414; }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none; }
+
+input[type="number"] {
+  -moz-appearance: textfield; }
+
 input:focus,
 textarea:focus,
 input:active,
@@ -118,7 +125,7 @@ button:active {
   font-family: 'Museo700';
   text-transform: uppercase;
   text-align: center;
-  padding: 15px 30px;
+  padding: 9px 30px;
   color: #fff;
   background-color: #55A43D;
   position: relative;
@@ -136,6 +143,11 @@ button:active {
     color: #000; }
     .btn_trsp:hover {
       color: #000; }
+
+.und {
+  text-decoration: underline; }
+  .und:hover {
+    text-decoration: none; }
 
 .list_circle {
   list-style-type: none;
@@ -331,16 +343,13 @@ button:active {
   right: 0; }
 
 .section_inner {
-  padding: 60px 0; }
+  padding: 35px 25px; }
 
 .section__ttl {
-  font-size: 40px;
-  color: #2D2A2B;
-  font-family: 'Museo900';
-  letter-spacing: 2px;
-  margin-bottom: 45px;
-  text-align: center;
-  text-transform: uppercase; }
+  font-size: 30px;
+  font-family: 'Museo300';
+  text-transform: uppercase;
+  margin-bottom: 25px; }
 
 .input__wrp {
   position: relative;
@@ -393,9 +402,13 @@ button:active {
     .crumbs li:not(:last-child)::after {
       content: '>';
       position: absolute;
-      right: -16px;
+      right: -18px;
       top: 0;
-      font-size: 14px; }
+      font-size: 14px;
+      font-family: 'Museo700';
+      -webkit-transform: scale(0.6, 1.1);
+          -ms-transform: scale(0.6, 1.1);
+              transform: scale(0.6, 1.1); }
   .crumbs li:last-child {
     color: #55A43D; }
 
@@ -1449,6 +1462,92 @@ button:active {
               align-items: center; }
     .pag__list .control:hover {
       opacity: .7; }
+
+.cart__top {
+  margin-bottom: 20px; }
+  .cart__top-amount {
+    font-size: 18px; }
+  .cart__top-clear {
+    text-decoration: underline; }
+
+.cart__item {
+  padding: 15px;
+  background-color: #fff;
+  margin-bottom: 10px; }
+  .cart__item-img {
+    max-height: 116px;
+    margin: 0 auto;
+    display: block; }
+    .cart__item-img:hover {
+      opacity: .8;
+      -webkit-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+              transform: scale(0.9); }
+  .cart__item-ttl {
+    font-size: 16px;
+    font-family: 'Museo700';
+    margin-bottom: 10px; }
+  .cart__item-quantity {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 15px; }
+    .cart__item-quantity-num {
+      max-width: 110px;
+      text-align: center; }
+    .cart__item-quantity-minus, .cart__item-quantity-plus {
+      font-family: 'Museo700';
+      width: 38px;
+      height: 37px;
+      border: 1px solid #c4c4c4; }
+    .cart__item-quantity-minus {
+      margin-right: 5px; }
+      .cart__item-quantity-minus:hover {
+        background-color: #F15941;
+        border-color: #F15941;
+        color: #fff; }
+    .cart__item-quantity-plus {
+      margin-left: 5px; }
+      .cart__item-quantity-plus:hover {
+        background-color: #55A43D;
+        border-color: #55A43D;
+        color: #fff; }
+  .cart__item-delete {
+    width: 33px;
+    height: 37px;
+    background: url("../img/icon__delete.svg") no-repeat 50% 50%/contain;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    opacity: .5; }
+    .cart__item-delete:hover {
+      -webkit-filter: grayscale(0);
+              filter: grayscale(0);
+      opacity: 1; }
+
+.cart__disc {
+  margin-top: 20px;
+  border-bottom: 1px solid #ccc; }
+  .cart__disc-ttl {
+    font-size: 18px;
+    font-family: 'Museo700'; }
+  .cart__disc-input {
+    text-align: center; }
+
+.cart__bot-ttl {
+  font-family: 'Museo700';
+  margin-bottom: 10px; }
+
+.cart__bot-total > div:nth-child(2) {
+  font-family: 'Museo700'; }
 
 @media screen and (min-height: 758px) {
   .cat__item {
