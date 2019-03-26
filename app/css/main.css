@@ -304,7 +304,9 @@ button:active {
     position: relative;
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
-            transform: scale(1); }
+            transform: scale(1);
+    -webkit-border-radius: 50%;
+            border-radius: 50%; }
     .owl-carousel .owl-dots button.owl-dot:not(:last-child) {
       margin-right: 13px; }
     .owl-carousel .owl-dots button.owl-dot.active {
@@ -906,9 +908,10 @@ button:active {
 .content {
   width: 82%;
   background-color: #F4F4F4;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
   .content__in {
-    width: 100%; }
+    width: 97%; }
   .content .content-menu__wrp {
     color: #fff;
     background-color: #55A43D;
@@ -1548,6 +1551,101 @@ button:active {
 
 .cart__bot-total > div:nth-child(2) {
   font-family: 'Museo700'; }
+
+.link__back {
+  margin-bottom: 25px;
+  padding-left: 30px;
+  display: block;
+  position: relative; }
+  .link__back::before {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 9px;
+    left: 0;
+    top: 4px;
+    background-position: 50% 50%;
+    -webkit-background-size: contain;
+            background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../img/catalog__link-arr.svg");
+    -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+            transform: scaleX(-1); }
+
+.card__slider-item {
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 230px;
+  width: auto !important; }
+
+.card .owl-carousel .owl-dots {
+  bottom: -20px; }
+
+.card__ttl {
+  font-size: 30px;
+  font-family: 'Museo900';
+  margin-bottom: 15px; }
+
+.card__descr {
+  font-size: 16px;
+  margin-bottom: 10px; }
+
+.card__price_old {
+  text-decoration: line-through;
+  color: #8D8D8D; }
+
+.card__price_cur {
+  font-size: 26px;
+  font-family: 'Museo700'; }
+
+.card__avail {
+  padding-left: 20px;
+  position: relative; }
+  .card__avail::before {
+    position: absolute;
+    content: '';
+    width: 14px;
+    height: 12px;
+    left: 0;
+    top: 3px;
+    background-position: 50% 50%;
+    -webkit-background-size: contain;
+            background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url("../img/icon__avail.svg"); }
+
+.card .btn {
+  width: 196px; }
+
+.tabs {
+  margin-top: 50px; }
+  .tabs__list {
+    list-style-type: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin: 0;
+    padding: 0; }
+    .tabs__list li {
+      width: 130px;
+      cursor: pointer;
+      text-align: center;
+      padding: 12px 15px;
+      background-color: #E8E8E8; }
+      .tabs__list li.active {
+        background-color: #fff; }
+  .tabs__container {
+    padding: 30px;
+    background-color: #fff; }
+  .tabs__content-item {
+    -webkit-transition: unset;
+    -o-transition: unset;
+    transition: unset; }
 
 @media screen and (min-height: 758px) {
   .cat__item {

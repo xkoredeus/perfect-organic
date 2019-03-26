@@ -1,11 +1,12 @@
 $(function() {
-  // $('.main-slider__cnt').owlCarousel({
-  //     nav: true,
-  //     items: 1,
-  //     loop: false,
-  //     dots: true,
-  //     navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
-  // });
+  $('.card__slider').owlCarousel({
+      // nav: true,
+      items: 1,
+      // loop: true,
+      dots: true,
+      autoplay: true,
+      // navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
+  });
 	// $('.team__cnt').owlCarousel({
  //      nav: false,
  //      dots: true,
@@ -33,25 +34,27 @@ $(function() {
  //        }
  //      }
 	// });
-	// $(".tab-content__item").hide();
-	// $(".tabs__container div.tab-content__item:first-child").addClass('active');
-	// $(".main-slider .main-slider__bg-item:first-child").addClass('active');
-	//     $('ul.tabs__list > li').click(function () {
-	//         if (!($(this).hasClass('active'))) {
-	//             var thisLi = $(this);
-	//             var numLi = thisLi.index();
-	//             thisLi.addClass('active').siblings().removeClass('active');
-	//             thisLi.parent().next().children('div').removeClass('active').eq(numLi).addClass('active','slow');
-	//             thisLi.parent().parent().parent().parent().find('.main-slider__bg').children('.main-slider__bg-item').removeClass('active','slow').eq(numLi).addClass('active','slow');
-	//             $('.reviews__cnt_text').owlCarousel('refresh');
-	//         }
- //    });
- $('.content-menu__wrp').on('click', function(){
-     $(this).find('.content-menu').toggleClass('active');
-  });
-  $('.content-menu__cross').on('click', function(){
-     $('.content-menu__wrp').toggleClass('active');
-  });
+
+	// tabs
+	$(document).ready(function () {
+		$(".tabs__content-item").hide();
+		$(".tabs__container div.tabs__content-item.active-tab").show();
+		$('ul.tabs__list > li').click(function () {
+		  if (!($(this).hasClass('active'))) {
+		    var thisLi = $(this);
+		    var numLi = thisLi.index();
+		    thisLi.addClass('active').siblings().removeClass('active');
+		    thisLi.parent().next().children('div').hide().eq(numLi).fadeIn('slow');
+		  }
+		});
+	});
+	//категории товаров
+	$('.content-menu__wrp').on('click', function(){
+	 $(this).find('.content-menu').toggleClass('active');
+	});
+	$('.content-menu__cross').on('click', function(){
+	 $('.content-menu__wrp').toggleClass('active');
+	});
   //стилизация input type number
   
 	// $(function() {
@@ -82,15 +85,15 @@ $(function() {
 	// 	$(this).prev('.cart__item-quantity-num').val(+$('.cart__item-quantity-num').val() + 1);
 	// });
 
-	$( '.cart__item-quantity' ).on( 'click', '.cart__item-quantity-minus, .cart__item-quantity-plus', function ( event ) {
-    event.preventDefault();
-    var input = $( this ).siblings( '.cart__item-quantity-num' );
-    if ( input.val() > 0 ) {
-        if ( $( this ).hasClass( '.cart__item-quantity-minus' )  ) {
-            input.val( +input.val() - 1 );
-        } else if ( $( this ).hasClass( '.cart__item-quantity-plus' ) ) {
-            input.val( +input.val() + 1 );
-        }
-    }
-	});
+	// $( '.cart__item-quantity' ).on( 'click', '.cart__item-quantity-minus, .cart__item-quantity-plus', function ( event ) {
+ //    event.preventDefault();
+ //    var input = $( this ).siblings( '.cart__item-quantity-num' );
+ //    if ( input.val() > 0 ) {
+ //        if ( $( this ).hasClass( '.cart__item-quantity-minus' )  ) {
+ //            input.val( +input.val() - 1 );
+ //        } else if ( $( this ).hasClass( '.cart__item-quantity-plus' ) ) {
+ //            input.val( +input.val() + 1 );
+ //        }
+ //    }
+	// });
 });
