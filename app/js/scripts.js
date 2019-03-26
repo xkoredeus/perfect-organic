@@ -92,15 +92,32 @@ $(function() {
 	// 	$(this).prev('.cart__item-quantity-num').val(+$('.cart__item-quantity-num').val() + 1);
 	// });
 
-	// $( '.cart__item-quantity' ).on( 'click', '.cart__item-quantity-minus, .cart__item-quantity-plus', function ( event ) {
- //    event.preventDefault();
- //    var input = $( this ).siblings( '.cart__item-quantity-num' );
- //    if ( input.val() > 0 ) {
- //        if ( $( this ).hasClass( '.cart__item-quantity-minus' )  ) {
- //            input.val( +input.val() - 1 );
- //        } else if ( $( this ).hasClass( '.cart__item-quantity-plus' ) ) {
- //            input.val( +input.val() + 1 );
- //        }
- //    }
-	// });
+	$( '.cart__item-quantity' ).on( 'click', '.cart__item-quantity-minus, .cart__item-quantity-plus', function () {
+    var input = $( this ).siblings( '.cart__item-quantity-num' );
+
+        if ( $( this ).hasClass( '.cart__item-quantity-minus' )  ) {
+            input.val( +input.val() - 1 );
+        } else if ( $( this ).hasClass( '.cart__item-quantity-plus' ) ) {
+            input.val( +input.val() + 1 );
+        }
+
+    console.log(this);
+	});
+	// var $quantityNum = $('.cart__item-quantity-num')
+	// var $arrowPlus = $(".cart__item-quantity-plus");
+ //    var $arrowMinus = $(".cart__item-quantity-minus");
+
+ //    $arrowPlus.each(function () {
+ //        $(this).click(function () {
+ //            $quantityNum.val(+$quantityNum.val() + 1);
+ //        });
+ //    });
+
+ //    $arrowMinus.each(function () {
+ //        $(this).click(function () {
+ //            if ($quantityNum.val() > 1) {
+ //                $quantityNum.val(+$quantityNum.val() - 1);
+ //            }
+ //        });
+ //    });
 });
