@@ -55,8 +55,15 @@ $(function() {
 	$('.content-menu__cross').on('click', function(){
 	 $('.content-menu__wrp').toggleClass('active');
 	});
-  //стилизация input type number
-  
+
+	//страница оформления заказа
+	$(".order__item_hide").hide();
+	$('.order__btn-next').on('click', function(e){
+		e.preventDefault();
+		$(this).closest('.order__item').next('.order__item_hide').slideToggle();
+	});
+
+	//стилизация input type number
 	// $(function() {
 	// 	var $shuka = 
 	//   (function quantityProducts() {

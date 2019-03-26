@@ -115,9 +115,9 @@ button:active
 			position: absolute
 			width: 8px
 			height: 8px
-			background-color: #EE414F
+			background-color: #55A43D
 			left: 0
-			top: 8px
+			top: 6px
 			border-radius: 50%
 .popup__container
 	padding: 40px
@@ -1460,7 +1460,13 @@ button:active
 		background-repeat: no-repeat
 		background-image: url('../img/catalog__link-arr.svg')
 		transform: scaleX(-1)
-		
+.tabs
+	&__list
+		list-style-type: none
+		li
+			cursor: pointer
+	&__content-item
+			transition: unset
 .card
 	&__slider-item
 		margin-left: auto
@@ -1500,25 +1506,207 @@ button:active
 			background-image: url('../img/icon__avail.svg')
 	.btn
 		width: 196px
-.tabs
-	margin-top: 50px
-	&__list
-		list-style-type: none
-		display: flex
-		flex-wrap: wrap
-		margin: 0
-		padding: 0
-		li
-			width: 130px
-			cursor: pointer
-			text-align: center
-			padding: 12px 15px
-			background-color: #E8E8E8
-			&.active
-				background-color: #fff
-	&__container
-		padding: 30px
+	.tabs
+		margin-top: 50px
+		&__list
+			display: flex
+			flex-wrap: wrap
+			margin: 0
+			padding: 0
+			li
+				width: 130px
+				text-align: center
+				padding: 12px 15px
+				background-color: #E8E8E8
+				&.active
+					background-color: #fff
+		&__container
+			padding: 30px
+			background-color: #fff
+		
+.select__wrp
+	display: flex
+	background-color: #fff
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		width: 14px
+		height: 13px
+		right: 16px
+		top: 11px
 		background-color: #fff
-	&__content-item
-		transition: unset
+	&::after
+		font-family: 'Museo900', sans-serif
+		position: absolute
+		content: '\003E'
+		right: 19px
+		top: 10px
+		color: #333333
+		font-weight: 100
+		font-size: 12px
+		z-index: 2
+		transform: rotate(90deg) scale(1.1,2)
+	select
+		-webkit-appearance: none
+		-moz-appearance: none
+		appearance: none
+		width: 100%
+		height: 100%
+		position: relative
+		z-index: 3
+		background-color: transparent
+.order
+	b
+		font-family: 'Museo900'
+	&__inputs
+		input
+			width: 100%
+			margin-bottom: 15px
+	.select__wrp
+		width: 250px
+	.tabs__list
+		li
+			padding-left: 35px
+			margin-bottom: 15px
+			position: relative
+			&::before,
+			&::after
+				content: ''
+				position: absolute
+				width: 18px
+				height: 18px
+				left: 0
+				top: 50%
+				margin-top: -10px
+				border-radius: 50%
+			&::before
+				border: 1px solid #8D8D8D
+			&::after
+				background-color: #55A43D
+				transform: scale(0)
+			&.active::after
+				transform: scale(1)
+			&.active::before
+				transform: scale(0)
+.order_confirm
+	b
+		font-family: 'Museo900'
+	&__item
+		padding: 15px
+.delivery
+	b
+		font-family: 'Museo900'
+	&__descr
+		margin-bottom: 15px
+		p
+			margin-bottom: 0
+	&__links
+		.btn
+			font-family: 'Museo500'
+			text-transform: none
+			&:hover
+				transform: scale(1)
+				opacity: .6
+		.btn:not(.active)
+			background-color: #fff
+			border: 1px solid #141414
+			color: #000
+		.btn:not(:last-child)
+			margin-right: 20px
+.policy
+	b
+		font-family: 'Museo900'
+	&__ttl
+		text-transform: uppercase
+		font-family: 'Museo900'
+	&__links
+		.active
+			color: #55A43D
+.about
+	&__item
+		height: 100%
+		background-position: 50% 50%
+		background-size: cover
+		background-repeat: no-repeat
+		background-color: #F4F4F4
+		position: relative
+		padding: 30px 20px
+		border: 1px solid #fff
+		&-ttl
+			font-family: 'Museo700'
+			margin-bottom: 15px
+			span
+				color: #55A43D
+	&__cnt
+		> div:nth-child(2)
+			> .about__item
+				background-color: #fff
+				padding-left: 40px
+				&::before
+					content: ''
+					position: absolute
+					width: 36px
+					height: 36px
+					background-color: #F4F4F4
+					left: -19px
+					top: 50%
+					margin-top: -18px
+					transform: rotate(45deg)
+.contacts
+	&__item
+		height: 100%
+		background-position: 50% 50%
+		background-size: cover
+		background-repeat: no-repeat
+		background-color: #F4F4F4
+		position: relative
+		padding: 40px 40px
+		background-color: #fff
+		border: 1px solid #F4F4F4
+		&-ttl
+			text-transform: uppercase
+			font-family: 'Museo900'
+			margin-bottom: 15px
+	&__cnt
+		> div:nth-child(1)
+			.contacts__item
+				background-color: #F4F4F4
+				font-size: 20px
+				text-transform: uppercase
+				&-ttl
+					font-size: 26px
+		> div:nth-child(2)
+			.contacts__item
+				&-mail
+					margin-bottom: 25px
+					color: #55A43D
+					text-decoration: underline
+					&:hover
+						opacity: .7
+				&-tel
+					font-family: 'Museo900'
+					font-size: 24px
+					color: #55A43D
+					&:hover
+						opacity: .7
+		> div:nth-child(3)
+			.contacts__item
+				text-align: center
+				span
+					font-size: 20px
+		> div:nth-child(4)
+			.contacts__item
+				width: 100%
+				&-ttl
+					font-size: 20px
+				p
+					color: #55A43D
+		> div:nth-child(5)
+			.contacts__item
+				width: 100%
+				min-height: 340px
+				background-position: 50% 50%
+				background-size: cover
+				background-repeat: no-repeat
 @import "media"
