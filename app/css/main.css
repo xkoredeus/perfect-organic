@@ -1948,7 +1948,15 @@ button:active {
           background-size: cover;
   background-repeat: no-repeat; }
 
+@media screen and (min-width: 1381px) {
+  .cat__item {
+    -webkit-background-size: cover;
+            background-size: cover; } }
+
 @media screen and (max-width: 1380px) {
+  .cat__item {
+    -webkit-background-size: auto auto;
+            background-size: auto; }
   .nav__contacts-tel {
     font-size: 18px; }
   .nav__list-item {
