@@ -1,6 +1,4 @@
-@media screen and (min-height: 758px)
-	.cat__item
-		background-size: cover
+// $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
 @media screen and (max-width: 1380px)
 	.nav__contacts-tel
 		font-size: 18px
@@ -12,29 +10,119 @@
 		left: 15.5%
 	.content .content-menu
 		left: 22%
-@media screen and (max-width: 1070px)
-	.main-slider__item
-		background-position-x: 20%
-	.main-slider__container
-		padding-right: 30px
-		padding-left: 30px
-	.main-slider .owl-carousel .owl-nav button.owl-prev
-		left: 0
-	.main-slider .owl-carousel .owl-nav button.owl-next
-		right: 0
+@media screen and (max-width: 992px)
+	.nav
+		position: fixed
+		width: 100%
+		height: auto
+		bottom: auto
+		padding-top: 10px
+		padding-bottom: 10px
+		&__top
+			height: 80px
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding-right: 60px
+		&__logo
+			margin-bottom: 0
+			max-width: 170px
+		&__menu
+			height: 0
+			display: none !important
+			&.active
+				height: auto
+				display: flex !important
+				flex-direction: column
+				align-items: center
+				text-align: center
+				padding-bottom: 20px
+		&__list
+			align-items: center
+			&-item_cart
+				display: none
+		&__hamburger,
+		&__cart-wrp
+			display: block
+	.content
+		width: 100%
+		padding-top: 100px
+		flex-direction: column
+		.content-menu__wrp
+			height: 50px
+			position: fixed
+			width: 100%
+			z-index: 4
+			.content-menu__btn
+				transform: rotate(0deg)
+				top: 0
+				max-width: unset
+				margin-top: 13px
+				position: absolute
+				left: 50%
+				margin-left: -80px
+		.content-menu__wrp:hover .content-menu__btn
+			transform: scale(0.91)
+		.content-menu
+			left: -100px
+			top: 150px
+			&.active
+				left: 0px
+				width: 100%
+		&__in
+			width: 100%
+			margin-top: 50px
+	.fancybox-container
+		z-index: 7
 @media screen and (max-width: 768px)
 	.section__ttl,
-	.main-slider__ttl
+	.catalog__item-ttl,
+	.catalog__item_feed .catalog__item-ttl
 		font-size: 25px
+	.catalog_sub .catalog__item-link
+		font-size: 18px
+	.cat__item
+		background-size: cover
+	.prod
+		padding: 10px 15px
+	.prod__item-ttl,
+	.content .content-menu__item-ttl
+		font-size: 26px
+	.cards__item-btn
+		position: relative
+		opacity: 1
+		margin-top: 20px
+	.cards__item:hover .cards__item-price
+		opacity: 1
+@media screen and (max-width: 600px)
+	.cat__wrp
+		flex-direction: column
+		.cat__item
+			width: 100% !important
+			min-height: auto
+			padding: 50px 0
+		.cat__item-cnt
+			opacity: 1
+			transform: translateX(0px)
+		.cat__item::before
+			display: none
+		.cat__item::after
+			opacity: .8 !important
+		.cat__item-ttl
+			color: #000 !important
+		.cat__item:nth-child(2) .cat__item-cnt > .cat__item-link .cat__item-link-image
+			display: none
+	.card .tabs__list li
+		width: 100%
+		padding-top: 8px
+		padding-bottom: 8px
+	.card .tabs__container
+		padding: 15px
+	.catalog__item_feed .catalog__item-tel
+		font-size: 28px
 @media screen and (max-width: 576px)
-	.news__item-wrp
-		max-width: 320px
-		margin-left: auto
-		margin-right: auto
-	.main-slider .owl-carousel .owl-nav button.owl-prev
-		left: -9px
-		transform: scale(.7)
-	.main-slider .owl-carousel .owl-nav button.owl-next
-		right: -9px
-		transform: scale(.7)
-	
+	.cart__item-ttl,
+	.cart__item-descr
+		text-align: center
+	.delivery__links .btn:not(:last-child)
+		margin-right: 0

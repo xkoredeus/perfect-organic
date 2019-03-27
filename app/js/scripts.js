@@ -59,4 +59,12 @@ $(function() {
 			input.val( +input.val() + 1 );
 		};
 	});
+	//mobile menu
+	if ( $(window).width() < 992 ) {
+		$(".nav__hamburger").on('click',function() {
+			$(this).toggleClass("active");
+			$('.nav__menu').toggleClass('active');
+			$('body').toggleClass("fixed");
+		});
+	}
 });

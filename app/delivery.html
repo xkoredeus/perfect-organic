@@ -13,26 +13,35 @@
 	<div class="container-fluid pl-0 pr-0">
 		<div class="row flex-xl-nowrap no-gutters">
 			<div class="nav d-flex flex-column justify-content-between">
-				<a href="#" class="nav__logo"><img src="img/main-logo.svg" alt="main-logo.svg" class="img-fluid"></a>
-				<div class="nav__list d-flex flex-column">
-					<a href="#" class="nav__list-item">Корзина</a>
-					<a href="#" class="nav__list-item">Продукция</a>
-					<a href="#" class="nav__list-item">Доставка и оплата</a>
-					<a href="#" class="nav__list-item">Правовая информация</a>
-					<a href="#" class="nav__list-item">Контакты</a>
-					<a href="#" class="nav__list-item">О компании</a>
-				</div>
-				<div class="nav__contacts d-flex flex-column">
-					<a href="tel:78005555512" class="nav__contacts-tel">8-800-555-55-12</a>
-					<a href="mailto:office@orgmlm.ru" class="nav__contacts-mail">office@orgmlm.ru</a>
-				</div>
-				<div class="nav__bot">
-					<div class="nav__bot-copy">© 2015-2018 Perfect Organics</div>
-					<a href="https://akticom.ru/" target="_blank" class="nav__bot-creator d-flex align-items-center">
-						<img src="img/icon__akticom.svg" alt="icon__akticom.svg" class="mr-2">
-						Сделано руками<br> Актиком
+				<div class="nav__top">
+					<a href="#" class="nav__logo"><img src="img/main-logo.svg" alt="main-logo.svg" class="img-fluid"></a>
+					<a href="#" class="nav__cart-wrp">
+						<div class="nav__cart-val">12</div>
 					</a>
+					<div class="nav__hamburger"></div>
 				</div>
+				<div class="nav__menu d-flex flex-column justify-content-between">
+					<div class="nav__list d-flex flex-column">
+						<a href="#" class="nav__list-item nav__list-item_cart">Корзина</a>
+						<a href="#" class="nav__list-item">Продукция</a>
+						<a href="#" class="nav__list-item">Доставка и оплата</a>
+						<a href="#" class="nav__list-item">Правовая информация</a>
+						<a href="#" class="nav__list-item">Контакты</a>
+						<a href="#" class="nav__list-item">О компании</a>
+					</div>
+					<div class="nav__contacts d-flex flex-column">
+						<a href="tel:78005555512" class="nav__contacts-tel">8-800-555-55-12</a>
+						<a href="mailto:office@orgmlm.ru" class="nav__contacts-mail">office@orgmlm.ru</a>
+					</div>
+					<div class="nav__bot">
+						<div class="nav__bot-copy">© 2015-2018 Perfect Organics</div>
+						<a href="https://akticom.ru/" target="_blank" class="nav__bot-creator d-flex align-items-center">
+							<img src="img/icon__akticom.svg" alt="icon__akticom.svg" class="mr-2">
+							Сделано руками<br> Актиком
+						</a>
+					</div>
+				</div>
+					
 			</div>
 			<main class="content d-flex">
 				<div class="content-menu__wrp">
@@ -298,9 +307,9 @@
 					<div class="delivery section_inner">
 						<h1 class="section__ttl">Доставка и оплата</h1>
 						<p>В этом разделе Вы можете найти всю интересующую информациюо нашем магазине, способах доставки и оплаты и т.д.</p>
-						<div class="delivery__links d-flex flex-wrap mb-4">
-							<a href="payments.html" class="btn">Как оплатить?</a>
-							<a href="delivery.html" class="btn active">Доставка</a>
+						<div class="delivery__links d-flex flex-wrap mb-4 flex-sm-row flex-column">
+							<a href="payments.html" class="btn mb-3 mb-sm-0">Как оплатить?</a>
+							<a href="delivery.html" class="btn active mb-3 mb-sm-0">Доставка</a>
 							<a href="repayment.html" class="btn">Возврат</a>
 						</div>
 						<div class="delivery__descr">
