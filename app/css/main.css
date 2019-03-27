@@ -471,7 +471,7 @@ button:active {
   .nav__hamburger {
     display: none;
     position: absolute;
-    top: 49px;
+    top: 34px;
     right: 23px;
     width: 32px;
     height: 3px;
@@ -499,7 +499,7 @@ button:active {
     .nav__hamburger.active {
       background-color: transparent;
       z-index: 6;
-      top: 22px;
+      top: 10px;
       right: 27px;
       width: 32px;
       height: 40px; }
@@ -1977,7 +1977,7 @@ button:active {
     padding-top: 10px;
     padding-bottom: 10px; }
     .nav__top {
-      height: 80px;
+      height: 50px;
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1993,7 +1993,7 @@ button:active {
       padding-right: 60px; }
     .nav__logo {
       margin-bottom: 0;
-      max-width: 170px; }
+      max-width: 120px; }
     .nav__menu {
       height: 0;
       display: none !important; }
@@ -2025,7 +2025,7 @@ button:active {
       display: block; }
   .content {
     width: 100%;
-    padding-top: 100px;
+    padding-top: 70px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -2052,7 +2052,7 @@ button:active {
               transform: scale(0.91); }
     .content .content-menu {
       left: -100px;
-      top: 150px; }
+      top: 120px; }
       .content .content-menu.active {
         left: 0px;
         width: 100%; }
