@@ -69,11 +69,18 @@
 		.content-menu__wrp:hover .content-menu__btn
 			transform: scale(0.91)
 		.content-menu
-			left: -100px
+			left: -100%
+			width: 100%
 			top: 120px
 			&.active
 				left: 0px
 				width: 100%
+			&__in
+				position: absolute
+				left: 15px
+				top: 15px
+				right: 15px
+				bottom: 15px
 		&__in
 			width: 100%
 			margin-top: 50px
@@ -131,3 +138,8 @@
 		text-align: center
 	.delivery__links .btn:not(:last-child)
 		margin-right: 0
+	.content .content-menu__cross
+		right: 0
+		top: -30px
+	.content .content-menu__in
+		top: 35px

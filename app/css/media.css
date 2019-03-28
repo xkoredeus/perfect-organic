@@ -101,11 +101,18 @@
           -ms-transform: scale(0.91);
               transform: scale(0.91); }
     .content .content-menu {
-      left: -100px;
+      left: -100%;
+      width: 100%;
       top: 120px; }
       .content .content-menu.active {
         left: 0px;
         width: 100%; }
+      .content .content-menu__in {
+        position: absolute;
+        left: 15px;
+        top: 15px;
+        right: 15px;
+        bottom: 15px; }
     .content__in {
       width: 100%;
       margin-top: 50px; }
@@ -172,4 +179,9 @@
   .cart__item-descr {
     text-align: center; }
   .delivery__links .btn:not(:last-child) {
-    margin-right: 0; } }
+    margin-right: 0; }
+  .content .content-menu__cross {
+    right: 0;
+    top: -30px; }
+  .content .content-menu__in {
+    top: 35px; } }
